@@ -1,4 +1,3 @@
-wsgi production file
 
 import os
 
