@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>References</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+            <a class="nav-item nav-link active" href="#">References</a>
+            <a class="nav-item nav-link" href="#">Other</a>
+          </div>
+        </div>
+      </nav>
+      <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <h1>Project References</h1>
+                <ul>
+                    <h5>Allways my first reference</h5>
+                    <a href="https://www.w3schools.com/"><li>https://www.w3schools.com/</li></a>
+                    <h5>A new one for me but another great reference tool</h5>
+                    <a href="https://developer.mozilla.org/en-US/"><li>https://developer.mozilla.org/en-US/</li></a>
+                    <h5>Main tutorial I used to build the base. It was a really good starting point</h5>
+                    <a href="https://djangocentral.com/building-a-blog-application-with-django/"><li>https://djangocentral.com/building-a-blog-application-with-django/</li></a>
+                    <h5>The first challenge that I ran into was adding images to the posts.  These were awesome for adding this feature.</h5>
+                    <a href="https://gist.github.com/prodeveloper/7342dc1d3be6256c46a71730ce548db5"><li>https://gist.github.com/prodeveloper/7342dc1d3be6256c46a71730ce548db5</li></a>
+                    <a href="https://matthiasomisore.com/web-programming/display-image-in-a-django-template-using-imagefield/"><li>https://matthiasomisore.com/web-programming/display-image-in-a-django-template-using-imagefield/</li></a>
+                    <h5>I used bootstrap for the main styling but I had issues with my own css style sheet</h5>
+                    <a href="https://tutorial.djangogirls.org/en/css/"><li>https://tutorial.djangogirls.org/en/css/</li></a>
+                    <h5>Setting up the navigation for the page</h5>
+                    <a href="https://djangoforbeginners.com/pages-app/"><li>https://djangoforbeginners.com/pages-app/</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

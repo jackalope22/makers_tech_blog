@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>{{ object.title }}</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+            <a class="nav-item nav-link" href="#">References</a>
+            <a class="nav-item nav-link" href="#">Other</a>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <h1>{{ object.title }}</h1>
+              <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
+              <img class="post-image"  style="padding: 20px;" src="{{post.picture.url}}">
+              <p class="card-text ">{{ object.content | safe }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

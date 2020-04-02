@@ -1,0 +1,75 @@
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    background: #f1f1f1;
+  }
+
+  h2 {
+    padding: 10px;
+  }
+  
+  h5 {
+    padding: 10px;
+  }
+
+  .nav-link {
+    font-size: 14pt;
+  }
+
+  /* Header/Blog Title */
+
+  .navbar-collapse {
+    margin: 10px;
+  }
+
+  .jumbotron {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 16px 48px #e3e7eb;
+  }
+
+  .post-image {
+    object-fit: contain;
+    margin: 5px;
+  }
+
+  .btn {
+    width: 200px;
+    padding: 10px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 16px 48px #e3e7eb;
+  }
+  
+  /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
