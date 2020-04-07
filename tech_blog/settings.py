@@ -23,7 +23,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = unlock
+SECRET_KEY = keeper.unlock
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -125,8 +125,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-AWS_ACCESS_KEY_ID = spacesUnlock
-AWS_SECRET_ACCESS_KEY = spacesUnlockS
+AWS_ACCESS_KEY_ID = keeper.spacesUnlock
+AWS_SECRET_ACCESS_KEY = keeper.spacesUnlockS
 AWS_STORAGE_BUCKET_NAME = 'techblogstatic'
 AWS_S3_ENDPOINT_URL = 'https://nyc3.digitaloceanspaces.com'
 AWS_S3_OBJECT_PARAMETERS = {
