@@ -125,6 +125,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+AWS_DEFAULT_ACL = None
 AWS_ACCESS_KEY_ID = keeper.spacesUnlock
 AWS_SECRET_ACCESS_KEY = keeper.spacesUnlockS
 AWS_STORAGE_BUCKET_NAME = 'techblogstatic'
@@ -133,12 +134,12 @@ AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
 
-AWS_LOCATION = 'techblogstatic'
+AWS_LOCATION = 'static'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-STATIC_URL = f'https://{AWS_S3_ENDPOINT_URL}/{AWS_LOCATION}/'
+STATIC_URL = f'https://{AWS_LOCATION}.{AWS_S3_ENDPOINT_URL}/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media/')
-MEDIA_URL = f'https://{AWS_S3_ENDPOINT_URL}/{AWS_LOCATION}/media/'
+MEDIA_URL = f'https://{AWS_LOCATION}.{AWS_S3_ENDPOINT_URL}/media/'
 
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
