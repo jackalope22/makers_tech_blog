@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'tech_blog.local_wsgi.application'
+WSGI_APPLICATION = 'tech_blog.wsgi.application'
 
 
 # Database
@@ -80,7 +80,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'blog',
-        'USER': 'techblogUser',
+        'USER': 'techbloguser',
         'PASSWORD': 'Number-11',
         'HOST': 'localhost',
         'PORT': '',
