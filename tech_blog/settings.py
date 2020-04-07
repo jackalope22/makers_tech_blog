@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from .keeper import unlock, spacesUnlock, spacesUnlockS
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,10 +21,10 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'r+3sf2qscx@0b-8gg9zvsdp&45eid!+0w4^=7ph&2#wo5b#o4v'
+SECRET_KEY = unlock
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '67.205.170.44']
 
@@ -37,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -121,8 +123,20 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-STATIC_URL = '/static/'
+AWS_ACCESS_KEY_ID = spacesUnlock
+AWS_SECRET_ACCESS_KEY = spacesUnlockS
+AWS_STORAGE_BUCKET_NAME = 'techblogstatic'
+AWS_S3_ENDPOINT_URL = 'https://nyc3.digitaloceanspaces.com'
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-MEDIA_URL = '/media/'
+AWS_LOCATION = 'techblogstatic'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_URL = f'https://{AWS_S3_ENDPOINT_URL}/{AWS_LOCATION}/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media/')
+MEDIA_URL = f'https://{AWS_S3_ENDPOINT_URL}/{AWS_LOCATION}/media/'
+
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
