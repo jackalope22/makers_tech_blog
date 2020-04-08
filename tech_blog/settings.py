@@ -28,7 +28,7 @@ SECRET_KEY = keeper.unlock
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '67.205.170.44']
+ALLOWED_HOSTS = ['localhost', '67.205.170.44', 'code-martian.net']
 
 
 # Application definition
