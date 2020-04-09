@@ -13,3 +13,6 @@ class PostDetail(generic.DetailView):
 
 class ReferenceView(generic.TemplateView):
     template_name = 'reference.html'
+
+class AboutView(generic.TemplateView):
+    template_name = 'about.html'
