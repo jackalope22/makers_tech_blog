@@ -17,6 +17,11 @@ body {
     font-size: 14pt;
   }
 
+  .abouttitle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
   /* Header/Blog Title */
 
   .navbar-collapse {
@@ -49,6 +54,11 @@ body {
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 0 16px 48px #e3e7eb;
+  }
+
+  .col-10 {
+    margin: auto;
+    text-align: center;
   }
   
   /* Clear floats after the columns */
