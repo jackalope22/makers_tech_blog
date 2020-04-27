@@ -23,12 +23,12 @@
         </div>
       </nav>
       <div class="row">
-        <div class="col-10">
+        <div class="col-8">
           <div class="card">
             <h1>{{ object.title }}</h1>
-            <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
-            <img class="post-image"  style="padding: 20px;" src="{{post.picture.url}}">
-            <p class="card-text ">{{ object.content | safe }}</p>
+            <p class="text-muted">{{ post.author }} | {{ post.created_on }}</p>
+            <img class="post-image"  style="padding: 40px;" src="{{post.picture.url}}">
+            <p class="card-text">{{ object.content | safe }}</p>
           </div>
         </div>
       </div>

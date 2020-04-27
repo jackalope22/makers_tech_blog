@@ -4,6 +4,15 @@ body {
     padding: 20px;
     background: #f1f1f1;
   }
+  
+  p {
+    margin: 20px;
+    line-height: 2;
+  }
+
+  .card-text {
+    line-height: 2;
+  }
 
   h2 {
     padding: 10px;
@@ -44,6 +53,7 @@ body {
   .btn {
     width: 200px;
     padding: 10px;
+    margin: 20px;
   }
   
   /* Add a card effect for articles */
@@ -57,6 +67,11 @@ body {
   }
 
   .col-10 {
+    margin: auto;
+    text-align: center;
+  }
+
+  .col-8 {
     margin: auto;
     text-align: center;
   }
