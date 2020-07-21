@@ -16,9 +16,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
-            <a class="nav-item nav-link" href="{% url 'reference' %}">References</a>
-            <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
+            <a class="nav-item nav-link" href="{% url 'home' %}"><b>Home</b></a>
+            <a class="nav-item nav-link" href="{% url 'reference' %}"><b>References</b></a>
+            <a class="nav-item nav-link" href="{% url 'about' %}"><b>About</b></a>
           </div>
         </div>
       </nav>
@@ -28,8 +28,42 @@
             <h1>{{ object.title }}</h1>
             <p class="text-muted">{{ post.author }} | {{ post.created_on }}</p>
             <img class="post-image"  style="padding: 40px;" src="{{post.picture.url}}">
-            <p class="card-text">{{ object.content | safe }}</p>
+            <p class="card-text">{{ post.content | safe }}</p>
           </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="card">
+          <!-- comments -->
+          <h2>{{ comments.count }} comments</h2>
+  
+          {% for comment in comments %}
+          <div class="comments" style="padding: 10px;">
+            <p class="font-weight-bold">
+              {{ comment.name }}
+              <span class=" text-muted font-weight-normal">
+                {{ comment.created_on }}
+              </span>
+            </p>
+            {{ comment.body | linebreaks }}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-8 ">
+        <div class="card">
+          {% if new_comment %}
+          <div class="alert alert-success" role="alert">
+            Your comment is awaiting moderation
+          </div>
+          {% else %}
+          <h3>Leave a comment</h3>
+          <form method="post" style="margin-top: 1.3em;">
+            {% csrf_token %}
+            {{ comment_form.as_p }}
+            <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+          </form>
+          {% endif %}
         </div>
       </div>
 </body>
