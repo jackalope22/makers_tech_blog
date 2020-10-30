@@ -1,53 +1,161 @@
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: #555;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+.active {
+  border-bottom: 2px solid #5c97e4;
+}
+
+.row{
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -------------------------------
+          Header
+--------------------------------*/
+
+header {
+  background-image: url("/media/computer-keyboard-34153.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 20px;
+  font-size: 26px;
+
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px 0px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: boarder-bottom 0.2s;
+     
+ }
+
+ .main-nav li a:hover,
+ .main-nav li a:active {
+    border-bottom: 2px solid #5c97e4;
+ }
+
+.about-nav {
+  float: right;
+  list-style: none;
+  margin-top: 40px;
+
+}
+
+.about-nav li {
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 5px;
+}
+
+.about-nav li a:link,
+.about-nav li a:visited {
+  padding: 8px 0px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: boarder-bottom 0.2s;
+     
+ }
+
+ .about-nav li a:hover,
+ .about-nav li a:active {
+    border-bottom: 2px solid #5c97e4;
+ }
+
+
+ .hero-text-box {
+    color: #5c97e4;
+    position: absolute;
+    width: 1140px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+
+.title {
+  color: white;
+  margin-top: 20px;
+  margin-right: 80px;
+  margin-left: 40px;
+}
+
+.nav-title {
+  color: black;
+  font-weight: 50%;
+  margin-top: 20px;
+  margin-right: 80px;
+}
+
+.comments {
+  float: inline-start;
+}
+
 body {
-    font-family: 'Courier New', Courier, monospace;
-    padding: 20px;
-    background: #f1f1f1;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  background: #f1f1f1;
   }
   
   p {
-    margin: 20px;
-    line-height: 2;
-  }
-
-  .card-text {
+    margin: 5px;
     line-height: 2;
   }
 
   h2 {
+    text-align: center;
     padding: 10px;
   }
   
   h5 {
+    text-align: center;
     padding: 10px;
   }
 
-  .nav-link {
-    font-size: 14pt;
-  }
-
   .abouttitle {
+    text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
   }
 
   /* Header/Blog Title */
 
-  .navbar-collapse {
-    margin: 10px;
-  }
-
-  .jumbotron {
-    padding: 30px;
-    font-size: 40px;
-    text-align: center;
-    background: white;
-    box-shadow: 0 16px 48px #e3e7eb;
-  }
-
   .post-image {
     object-fit: contain;
     margin: 5px;
+    max-width: 1140px;
   }
 
   .btn {
@@ -55,33 +163,14 @@ body {
     padding: 10px;
     margin: 20px;
   }
-  
-  /* Add a card effect for articles */
-  .card {
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 0 16px 48px #e3e7eb;
-  }
 
-  .col-10 {
-    margin: auto;
-    text-align: center;
-  }
-
-  .col-8 {
-    margin: auto;
-    text-align: center;
-  }
   
-  /* Clear floats after the columns */
+  /* Clear floats after the columns 
   .row::after {
     content: "";
     display: table;
     clear: both;
-  }
+  }*/
   
   /* Footer */
   .footer {

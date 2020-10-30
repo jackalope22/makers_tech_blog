@@ -9,42 +9,55 @@
     <title>References</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Blog</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="{% url 'home' %}"><b>Home</b></a>
-            <a class="nav-item nav-link" href="{% url 'reference' %}"><b>References</b></a>
-            <a class="nav-item nav-link active" href="#"><b>About</b></a>
-          </div>
-        </div>
-      </nav>
+  <nav>
+    <div class="row">
+        <h2 class="nav-title">Makers Blog</h2>
+        <ul class="about-nav">
+            <li><a href="https://code-martian.net">Home</a></li>
+            <li><a href="{% url 'reference' %}">References</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="https://github.com/jackalope22">Personal Github</a></li>
+        </ul>
+    </div>
+  </nav>
       <div class="row">
-        <div class="col-10">
-            <div class="card">
-                <h1 class="abouttitle" >About the Project</h1>
-                <p>
-                  Sooooooo, I started this project because I wanted to show off some of the skills I have that I do not always know how to articulate.  
-                  I was also let go from my last job at a weird time in my development as a programmer.  I was just getting to a point where I was 
-                  confident and comfortable with my skills and I was working on an awesome project that was really pushing me to learn more.  
-                  I had a mentor in a sense, someone I could ask questions to when I was stuck.  I really felt like I was getting traction and my boss 
-                  used me as a scapegoat for his own inabilities and I was let go.  It really sucked because I was getting better at what I was doing 
-                  but it really affected my confidence.  Not only that but I really didn't know what direction I was heading with my career at the time.  
-                  So I did what I always do, continued taking classes online to learn more and build my confidence back up. The classes were a great help 
-                  so I decided I needed a project to show off the skills.  I had just missed a job opportunity because I did not know enough django.  
-                  So why not work with django some more.  I had a taste of it so let's continue building on that.  It was perfect, I could follow some tutorials 
-                  to get started and then build from there.  Not only that but I would be challenged in many different areas, python, web, web hosting, ssl, domains, 
-                  the cloud, and git.  I had some experience in all of them but I have never had to bring them all together on my own.  
+        <div class="col span-1-of-2">
+            <h2 class="abouttitle" >About the Project</h2>
+            <p>
+              Sooooooo, I started this project because I wanted to show off some of the skills I have that I do not always know how to articulate.  
+              I was also let go from my last job at a weird time in my development as a programmer.  I was just getting to a point where I was 
+              confident and comfortable with my skills and I was working on an awesome project that was really pushing me to learn more.  
+              I had a mentor in a sense, someone I could ask questions to when I was stuck.  I really felt like I was getting traction and my boss 
+              used me as a scapegoat for his own inabilities and I was let go.  It really sucked because I was getting better at what I was doing 
+              but it really affected my confidence.  Not only that but I really didn't know what direction I was heading with my career at the time.  
+              So I did what I always do, continued taking classes online to learn more and build my confidence back up. The classes were a great help 
+              so I decided I needed a project to show off the skills.  I had just missed a job opportunity because I did not know enough django.  
+              So why not work with django some more.  I had a taste of it so let's continue building on that.  It was perfect, I could follow some tutorials 
+              to get started and then build from there.  Not only that but I would be challenged in many different areas, python, web, web hosting, ssl, domains, 
+              the cloud, and git.  I had some experience in all of them but I have never had to bring them all together on my own.  
                   
-                  I will continue to post and add updates to the project as I go but I figure this will atleast give you an idea of what you are 
-                  looking at here.  Thank you and hope you come back to see how it goes. 
+              I will continue to post and add updates to the project as I go but I figure this will atleast give you an idea of what you are 
+              looking at here.  Thank you and hope you come back to see how it goes. 
                   
-                </p>
-            </div>
+            </p>
         </div>
+        <div class="col span-1-of-2">
+          <h2 class="abouttitle">About Me</h2>
+          <img class="aboutme-image" style="height:200px; display: block; margin-left: auto; margin-right: auto;" src="{% static 'media/django-gettingstarted.jpg' %}">
+          <p>I am a mid-level programmer in my 30's that has returned to the tech world in the last couple years. 
+              I had previously spent some time in the industry as well as spending my free time online 
+              learning. I do a lot of online learning, it fills the time and keeps me fresh on what I am doing.
+              my main focus has been working in python and learning more dev ops but I also have a history with 
+              web development.  web is really where I got my start.
+          </p>
+          <h3>Follow Me</h3>
+                <ul>
+                    <h5>Github</h5>
+                    <a href="https://github.com/jackalope22"><li>https://github.com/jackalope22</li></a>
+                    <h5>Linkedin</h5>
+                    <a href="www.linkedin.com/in/michael-akers-b97314138"><li>www.linkedin.com/in/michael-akers-b97314138</li></a>
+                </ul>
+      </div>
     </div>
 </body>
 </html>

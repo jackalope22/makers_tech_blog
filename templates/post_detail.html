@@ -4,54 +4,50 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Grid.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <title>{{ object.title }}</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Blog</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="{% url 'home' %}"><b>Home</b></a>
-            <a class="nav-item nav-link" href="{% url 'reference' %}"><b>References</b></a>
-            <a class="nav-item nav-link" href="{% url 'about' %}"><b>About</b></a>
-          </div>
-        </div>
-      </nav>
+  <nav>
+    <div class="row">
+      <div class="col span_1_of_3">
+        <h1 class="nav-title">Makers Blog</h1>
+      </div>
+      <div class="col span_2_of_3">
+        <ul class="about-nav">
+          <li><a href="https://code-martian.net">Home</a></li>
+          <li><a href="{% url 'reference' %}">References</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="https://github.com/jackalope22">Personal Github</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
       <div class="row">
-        <div class="col-8">
-          <div class="card">
-            <h1>{{ object.title }}</h1>
+          <h1>{{ object.title }}</h1>
             <p class="text-muted">{{ post.author }} | {{ post.created_on }}</p>
             <img class="post-image"  style="padding: 40px;" src="{{post.picture.url}}">
             <p class="card-text">{{ post.content | safe }}</p>
-          </div>
-        </div>
       </div>
-      <div class="col-8">
-        <div class="card">
+      <div class="row">
+        <div class="col span-2-of-2">
           <!-- comments -->
-          <h2>{{ comments.count }} comments</h2>
-  
-          {% for comment in comments %}
-          <div class="comments" style="padding: 10px;">
-            <p class="font-weight-bold">
-              {{ comment.name }}
-              <span class=" text-muted font-weight-normal">
-                {{ comment.created_on }}
-              </span>
-            </p>
-            {{ comment.body | linebreaks }}
-          </div>
-          {% endfor %}
+          <h2 style="text-align: center; width: 100%;">{{ comments.count }} comments</h2>
         </div>
+          {% for comment in comments %}
+        <div class="comments col span-1-of-2" style="padding: 10px;">
+          <p class="font-weight-bold">{{ comment.name }}
+            <span class=" text-muted font-weight-normal">{{ comment.created_on }}
+            </span>
+          </p>
+        </div>
+        <div class="col span-1-of-2">
+            {{ comment.body | linebreaks }}
+        </div>
+          {% endfor %}
       </div>
-      <div class="col-8 ">
-        <div class="card">
+      <div class="col span-1-of-2">
           {% if new_comment %}
           <div class="alert alert-success" role="alert">
             Your comment is awaiting moderation
@@ -64,7 +60,6 @@
             <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
           </form>
           {% endif %}
-        </div>
       </div>
 </body>
 </html>

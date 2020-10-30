@@ -9,53 +9,49 @@
     <title>References</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Blog</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="{% url 'home' %}"><b>Home</b></a>
-            <a class="nav-item nav-link active" href="#"><b>References</b></a>
-            <a class="nav-item nav-link" href="{% url 'about' %}"><b>About</b></a>
-          </div>
-        </div>
-      </nav>
+  <nav>
+    <div class=row>
+        <h2 class="nav-title">Makers Blog</h2>
+        <ul class="about-nav">
+            <li><a href="https://code-martian.net">Home</a></li>
+            <li><a href="{% url 'reference' %}">References</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="https://github.com/jackalope22">Personal Github</a></li>
+        </ul>
+    </div>
+  </nav>
       <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <h1>Project References</h1>
-                <ul>
-                    <h5>Allways my first reference</h5>
-                    <a href="https://www.w3schools.com/"><li>https://www.w3schools.com/</li></a>
-                    <h5>A new one for me but another great reference tool</h5>
-                    <a href="https://developer.mozilla.org/en-US/"><li>https://developer.mozilla.org/en-US/</li></a>
-                    <h5>Main tutorial I used to build the base. It was a really good starting point</h5>
-                    <a href="https://djangocentral.com/building-a-blog-application-with-django/"><li>https://djangocentral.com/building-a-blog-application-with-django/</li></a>
-                    <h5>The first challenge that I ran into was adding images to the posts.  These were awesome for adding this feature.</h5>
-                    <a href="https://gist.github.com/prodeveloper/7342dc1d3be6256c46a71730ce548db5"><li>https://gist.github.com/prodeveloper/7342dc1d3be6256c46a71730ce548db5</li></a>
-                    <a href="https://matthiasomisore.com/web-programming/display-image-in-a-django-template-using-imagefield/"><li>https://matthiasomisore.com/web-programming/display-image-in-a-django-template-using-imagefield/</li></a>
-                    <h5>I used bootstrap for the main styling but I had issues with my own css style sheet</h5>
-                    <a href="https://tutorial.djangogirls.org/en/css/"><li>https://tutorial.djangogirls.org/en/css/</li></a>
-                    <h5>Setting up the navigation for the page</h5>
-                    <a href="https://djangoforbeginners.com/pages-app/"><li>https://djangoforbeginners.com/pages-app/</li></a>
-                    <h5>First attempt at going live (heroku) fail to serve images</h5>
-                    <a href="https://tutorial-extensions.djangogirls.org/en/heroku/"><li>https://tutorial-extensions.djangogirls.org/en/heroku/</li></a>
-                    <h5>heroku deploy (fail) </h5>
-                    <a href="https://gearheart.io/blog/how-to-deploy-a-django-application-on-heroku/"><li>https://gearheart.io/blog/how-to-deploy-a-django-application-on-heroku/</li></a>
-                    <h5>heroku deploy (fail) whitenoise changes</h5>
-                    <a href="http://whitenoise.evans.io/en/stable/django.html"><li>http://whitenoise.evans.io/en/stable/django.html</li></a>
-                    <h5>Switch to DigitalOcean deploy with major sucess</h5>
-                    <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04"><li>https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04</li></a>
-                    <h5>DigitalOcean, Django, Gunicorn, Nginx</h5>
-                    <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04"><li>https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04</li></a>
-                    <h5>DigitalOcean Spaces setup</h5>
-                    <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-digitalocean-space-and-api-key"><li>https://www.digitalocean.com/community/tutorials/how-to-create-a-digitalocean-space-and-api-key</li></a>
-                    <h5>Setting up SSI</h5>
-                    <a href="https://www.digitalocean.com/community/tutorials/how-to-install-an-ssl-certificate-from-a-commercial-certificate-authority"><li>https://www.digitalocean.com/community/tutorials/how-to-install-an-ssl-certificate-from-a-commercial-certificate-authority</li></a>
-                </ul>
-            </div>
+        <div class="col span-1-of-1">
+          <h1>Project References</h1>
+          <ul>
+              <h5>Allways my first reference</h5>
+              <a href="https://www.w3schools.com/"><li>https://www.w3schools.com/</li></a>
+              <h5>A new one for me but another great reference tool</h5>
+              <a href="https://developer.mozilla.org/en-US/"><li>https://developer.mozilla.org/en-US/</li></a>
+              <h5>Main tutorial I used to build the base. It was a really good starting point</h5>
+              <a href="https://djangocentral.com/building-a-blog-application-with-django/"><li>https://djangocentral.com/building-a-blog-application-with-django/</li></a>
+              <h5>The first challenge that I ran into was adding images to the posts.  These were awesome for adding this feature.</h5>
+              <a href="https://gist.github.com/prodeveloper/7342dc1d3be6256c46a71730ce548db5"><li>https://gist.github.com/prodeveloper/7342dc1d3be6256c46a71730ce548db5</li></a>
+              <a href="https://matthiasomisore.com/web-programming/display-image-in-a-django-template-using-imagefield/"><li>https://matthiasomisore.com/web-programming/display-image-in-a-django-template-using-imagefield/</li></a>
+              <h5>I used bootstrap for the main styling but I had issues with my own css style sheet</h5>
+              <a href="https://tutorial.djangogirls.org/en/css/"><li>https://tutorial.djangogirls.org/en/css/</li></a>
+              <h5>Setting up the navigation for the page</h5>
+              <a href="https://djangoforbeginners.com/pages-app/"><li>https://djangoforbeginners.com/pages-app/</li></a>
+              <h5>First attempt at going live (heroku) fail to serve images</h5>
+              <a href="https://tutorial-extensions.djangogirls.org/en/heroku/"><li>https://tutorial-extensions.djangogirls.org/en/heroku/</li></a>
+              <h5>heroku deploy (fail) </h5>
+              <a href="https://gearheart.io/blog/how-to-deploy-a-django-application-on-heroku/"><li>https://gearheart.io/blog/how-to-deploy-a-django-application-on-heroku/</li></a>
+              <h5>heroku deploy (fail) whitenoise changes</h5>
+              <a href="http://whitenoise.evans.io/en/stable/django.html"><li>http://whitenoise.evans.io/en/stable/django.html</li></a>
+              <h5>Switch to DigitalOcean deploy with major sucess</h5>
+              <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04"><li>https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04</li></a>
+              <h5>DigitalOcean, Django, Gunicorn, Nginx</h5>
+              <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04"><li>https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04</li></a>
+              <h5>DigitalOcean Spaces setup</h5>
+              <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-digitalocean-space-and-api-key"><li>https://www.digitalocean.com/community/tutorials/how-to-create-a-digitalocean-space-and-api-key</li></a>
+              <h5>Setting up SSI</h5>
+              <a href="https://www.digitalocean.com/community/tutorials/how-to-install-an-ssl-certificate-from-a-commercial-certificate-authority"><li>https://www.digitalocean.com/community/tutorials/how-to-install-an-ssl-certificate-from-a-commercial-certificate-authority</li></a>
+          </ul>
         </div>
     </div>
 </body>
